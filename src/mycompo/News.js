@@ -1,0 +1,312 @@
+import React, { Component } from 'react';
+import Newsitem from './News_item'
+
+export class News extends Component {
+   arr= [
+    {
+        "source": {
+            "id": null,
+            "name": "The Indian Express"
+        },
+        "author": "Tanishq Vaddi",
+        "title": "IND vs AUS 3rd ODI, Live Cricket Score: Australia win by 21 runs, Adam Zampa picks up four wickets - The Indian Express",
+        "description": "India vs Australia 3rd ODI, Live Score: Leg-spinner Adam Zampa shone bright with the ball as Australia bundled out India for 248 in 49.1 overs.",
+        "url": "https://indianexpress.com/article/sports/cricket/ind-vs-aus-3rd-odi-live-cricket-score-india-vs-australia-latest-cricket-match-scorecard-updates-at-ma-chidambaram-stadium-chennai-8511553/",
+        "urlToImage": "https://images.indianexpress.com/2023/03/kohli-and-rahul.jpg",
+        "publishedAt": "2023-03-22T16:37:00Z",
+        "content": "India vs Australia: A recap of the series\r\n1st Test, Nagpur- India beat Australia by an innings and 132 runs. Ravindra Jadeja was the Player of the Match for his all-round show with the bat and the b… [+1717 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Hindustan Times"
+        },
+        "author": "HT Sports Desk",
+        "title": "Watch: Kohli bursts into laughter after Smith's DRS call 'embarrasses' Australia - Hindustan Times",
+        "description": "Virat Kohli could not help but break into laughter seeing replays on the big screen following Steve Smith's ‘embarrassing’ DRS call. | Cricket",
+        "url": "https://www.hindustantimes.com/cricket/virat-kohli-can-t-stop-laughing-after-steve-smith-s-sheepish-drs-call-embarrasses-australia-in-3rd-odi-101679497550322.html",
+        "urlToImage": "https://www.hindustantimes.com/ht-img/img/2023/03/22/1600x900/kohli_steve_smith_1679497885384_1679497928626_1679497928626.jpg",
+        "publishedAt": "2023-03-22T15:18:55Z",
+        "content": "DRS calls are always tricky, especially when it is against a high-profile opposition batter like Virat Kohli. The sheer weight the wicket of someone like Kohli's can at times force opposition captain… [+2397 chars]"
+    },
+    {
+        "source": {
+            "id": "the-times-of-india",
+            "name": "The Times of India"
+        },
+        "author": "TIMESOFINDIA.COM",
+        "title": "IPL new rule allows captains naming of playing XI after toss: Report - Indiatimes.com",
+        "description": "Cricket News: The Indian Premier League (IPL) 2023 will see a new rule that will help captains to choose their final Playing XI after the toss, reported ESPNcricinf",
+        "url": "https://timesofindia.indiatimes.com/sports/cricket/ipl/top-stories/ipl-new-rule-allows-captains-naming-of-playing-xi-after-toss/articleshow/98915406.cms",
+        "urlToImage": "https://static.toiimg.com/thumb/msid-98915454,width-1070,height-580,imgsize-90592,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
+        "publishedAt": "2023-03-22T13:15:00Z",
+        "content": ""
+    },
+    {
+        "source": {
+            "id": "the-times-of-india",
+            "name": "The Times of India"
+        },
+        "author": "etimes.in",
+        "title": "Virat Kohli's impromptu dance on Jr NTR and Ram Charan's 'Naatu Naatu' during the India Vs Australia matc - Indiatimes.com",
+        "description": "Looks like the 'Naatu Naatu' fever isn't just limited to the Oscar stage but it has reached the cricket field as we",
+        "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/virat-kohlis-impromptu-dance-on-jr-ntr-and-ram-charans-naatu-naatu-during-the-india-vs-australia-match-wins-the-internet-watch/articleshow/98911362.cms",
+        "urlToImage": "https://static.toiimg.com/thumb/msid-98911437,width-1070,height-580,overlay-toi_sw,pt-32,y_pad-40,resizemode-75,imgsize-60974/98911437.jpg",
+        "publishedAt": "2023-03-22T11:24:00Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Cricketaddictor.com"
+        },
+        "author": "Cricket Addictor",
+        "title": "India Test Squad for WTC Final 2023 - Cricket Addictor",
+        "description": null,
+        "url": "https://cricketaddictor.com/icc-wtc-2021-23/india-test-squad-for-wtc-final-2023/",
+        "urlToImage": null,
+        "publishedAt": "2023-03-22T09:00:43Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": "espn-cric-info",
+            "name": "ESPN Cric Info"
+        },
+        "author": "ESPNcricinfo staff",
+        "title": "Fleming to coach Texas Super Kings in USA's Major League Cricket - ESPNcricinfo",
+        "description": "Fleming is now the head coach at all three CSK teams, in the IPL, at the SA20, and at the MLC",
+        "url": "https://www.espncricinfo.com/story/stephen-fleming-to-coach-texas-super-kings-in-the-us-major-league-cricket-tournament-1364772",
+        "urlToImage": "https://img1.hscicdn.com/image/upload/f_auto/lsci/db/PICTURES/CMS/328200/328239.6.jpg",
+        "publishedAt": "2023-03-22T08:54:01Z",
+        "content": "NewsFleming is now the head coach at all three CSK teams, in the IPL, at the SA20, and at the MLC"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Hindustan Times"
+        },
+        "author": "HT Sports Desk",
+        "title": "'Agar ye teeno format khelenge…': Shastri cautions Dravid on India star - Hindustan Times",
+        "description": "Former Team India head coach Ravi Shastri had a word of advice for Rahul Dravid on how to approach the youngster. | Cricket",
+        "url": "https://www.hindustantimes.com/cricket/agar-ye-teeno-format-khelenge-toh-gadbad-hogi-ravi-shastri-cautions-rahul-dravid-over-india-star-s-treatment-101679470936317.html",
+        "urlToImage": "https://www.hindustantimes.com/ht-img/img/2023/03/22/1600x900/shastri_dravid_1679474224202_1679474224435_1679474224435.jpg",
+        "publishedAt": "2023-03-22T08:39:01Z",
+        "content": "Team India took the field on Wednesday for the series decider against Australia in the third ODI; the series is currently level 1-1 with the final match taking place at the iconic MA Chidambaram Stad… [+2115 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "News18"
+        },
+        "author": "Debdutta Bhattacharjee",
+        "title": "ICC World Cup 2023: Shoaib Akhtar Wants 'Revenge' for 2011 Semifinal Loss to India - News18",
+        "description": "Shoaib Akhtar rued the verbal jingoism that has been going on between the Board of Control for Cricket in India (BCCI) and the Pakistan Cricket Board (PCB)",
+        "url": "https://www.news18.com/cricketnext/shoaib-akhtar-icc-world-cup-2023-india-vs-pakistan-icc-world-cup-2011-bcci-pcb-7355671.html",
+        "urlToImage": "https://images.news18.com/ibnlive/uploads/2023/03/shoaib-akhtar-2-167947697416x9.jpg",
+        "publishedAt": "2023-03-22T08:19:15Z",
+        "content": "Maverick former Pakistan speedster Shoaib Akhtar wants an ICC World Cup final showdown with bitter rivals India and has called for revenge for the semi-final loss in 2011.\r\nI want an India vs Pakista… [+3194 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Hindustan Times"
+        },
+        "author": "HT Sports Desk",
+        "title": "WC 2023 to get underway in October; Chepauk, Wankhede among 12 venues: Report - Hindustan Times",
+        "description": "The 50-over ICC World Cup will get underway on October 5 in India. India's all-format captain Rohit Sharma will lead the two-time champions in the 2023 edition of the ICC World Cup. | Cricket",
+        "url": "https://www.hindustantimes.com/cricket/icc-world-cup-2023-to-get-underway-in-october-chepauk-wankhede-and-narendra-modi-stadium-among-12-venues-report-pakistan-visa-wc-bcci-icc-tax-exemption-101679470122800.html",
+        "urlToImage": "https://www.hindustantimes.com/ht-img/img/2023/03/22/1600x900/Collage_Maker-22-Mar-2023-01-38-PM-4903_1679472583539_1679472595126_1679472595126.jpg",
+        "publishedAt": "2023-03-22T08:13:00Z",
+        "content": "Two-time champions India will reportedly host the 2023 edition of the ICC World Cup in October-November this year. The forthcoming edition of the ICC event is likely to start on October 5 in India. C… [+2302 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Hindustan Times"
+        },
+        "author": "HT Sports Desk",
+        "title": "'That's something I've been telling Sanju': Sreesanth's advice for Samson - Hindustan Times",
+        "description": "The former India bowler spoke in detail about Sanju Samson as he previewed the Rajasthan Royals ahead of IPL 2023. | Cricket",
+        "url": "https://www.hindustantimes.com/cricket/thats-something-i-ve-been-telling-sanju-sreesanth-drops-crucial-advice-for-samson-reveals-team-india-desire-101679465437073.html",
+        "urlToImage": "https://www.hindustantimes.com/ht-img/img/2023/03/22/1600x900/sanju_samson_1679469419051_1679469419313_1679469419313.jpg",
+        "publishedAt": "2023-03-22T07:18:32Z",
+        "content": "The 2023 Indian Premier League begins on March 31 with Mahendra Singh Dhoni's Chennai Super Kings taking on the defending champions Gujarat Titans in Ahmedabad. Last year's runners-up, Rajasthan Roya… [+2003 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Cricket World"
+        },
+        "author": null,
+        "title": "European Cricket League 2023, Championship Week - Fantasy Cricket Predictions and Betting Tips: All matches, 22nd March - Cricket World",
+        "description": "Here are the Fantasy Cricket Predictions and Betting Tips for European Cricket League 2023, Championship Week which will be played at the Cartama Oval, Cartama in Spain.",
+        "url": "https://www.cricketworld.com/european-cricket-league-2023-championship-week-fantasy-cricket-predictions-and-betting-tips-all-matches-22nd-march/86065.htm",
+        "urlToImage": "https://www.cricketworld.com/media/img/a/d/123189.jpg",
+        "publishedAt": "2023-03-22T06:52:11Z",
+        "content": "Top Tournament Stats - European Cricket League 2023\r\nMost Runs\r\nMost Wickets\r\nMost 6s, 4s\r\nPoints Table\r\nFixtures\r\nDreux vs Farmers, Match 11\r\nDreux are placed at the 2nd spot in the European Cricket… [+12625 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Hindustan Times"
+        },
+        "author": "HT Sports Desk",
+        "title": "'Why am I hyping so much about him?': Ashwin on Hardik's comment on Test return - Hindustan Times",
+        "description": "Hardik shut all the talk around his return to Test cricket for WTC final with a genuine comment which on Tuesday received a blockbuster reaction from fellow teammate Ravichandran Ashwin. | Cricket",
+        "url": "https://www.hindustantimes.com/cricket/why-am-i-hyping-so-much-about-hardik-ashwin-s-blockbuster-reaction-to-pandya-s-genuine-comment-on-test-return-101679417596693.html",
+        "urlToImage": "https://www.hindustantimes.com/ht-img/img/2023/03/21/1600x900/ashwin_hardik_1679420005005_1679420012900_1679420012900.jpg",
+        "publishedAt": "2023-03-22T05:21:30Z",
+        "content": "Moments after India reached the World Test Championship final for the second time in a row, there was a brewing discussion on whether Hardik Pandya should return to the Test side for the summit clash… [+3024 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "International Cricket Council"
+        },
+        "author": "Amarnath Devaji",
+        "title": "Top five run-scorers in the current World Test Championship - ICC Cricket",
+        "description": "With the league stage of the ICC World Test Championship 2021-23 wrapped up and just the WTC final to come, we look at the highest run-scorers in the current cycle.",
+        "url": "https://www.icc-cricket.com/news/3118047",
+        "urlToImage": "https://resources.pulse.icc-cricket.com/ICC/photo/2023/03/21/cdc44b26-d7da-4451-98bf-f8d1f9f499e2/GettyImages-1245326290.jpg",
+        "publishedAt": "2023-03-22T03:30:40Z",
+        "content": "With the league stage of the ICC World Test Championship 2021-23 wrapped up and just the WTC final to come, we look at the highest run-scorers in the current cycle.The second edition of the ICC World… [+7206 chars]"
+    },
+    {
+        "source": {
+            "id": "the-times-of-india",
+            "name": "The Times of India"
+        },
+        "author": "TIMESOFINDIA.COM",
+        "title": "UP Warriorz vs Delhi Capitals Highlights: Delhi Capitals enter WPL final with 5-wicket win over UP Warrio - Indiatimes.com",
+        "description": "Cricket News: Delhi Capitals became the first team to enter the final of the inaugural Women's Premier League with a five-wicket victory over UP Warriorz in the las",
+        "url": "https://timesofindia.indiatimes.com/sports/cricket/wpl/up-warriorz-vs-delhi-capitals-highlights-delhi-capitals-enter-wpl-final-with-5-wicket-win-over-up-warriorz/articleshow/98877528.cms",
+        "urlToImage": "https://static.toiimg.com/thumb/msid-98877679,width-1070,height-580,imgsize-43446,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
+        "publishedAt": "2023-03-21T17:43:00Z",
+        "content": "!@DelhiCapitals win their final league stage game by 5 wickets &amp; 13 balls to spare to mark their https://t.co/of9oL5cIdY\r\n— Women's Premier League (WPL) (@wplt20) 1679419364000"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "News18"
+        },
+        "author": "Aditya Maheshwari",
+        "title": "'I'll Request Modi Sahab to Let Cricket Happen Between India and Pakistan': Shahid Afridi - News18",
+        "description": "India and Pakistan last played a bilateral series way back in 2012 when the Men in Green toured India for three ODIs and as many T20Is",
+        "url": "https://www.news18.com/cricketnext/india-vs-pakistan-cricket-shahid-afridi-prime-minister-narendra-modi-ind-vs-pak-7349473.html",
+        "urlToImage": "https://images.news18.com/ibnlive/uploads/2023/03/collage-maker-21-mar-2023-06-40-pm-2780-167940432016x9.jpg",
+        "publishedAt": "2023-03-21T13:16:09Z",
+        "content": "Veteran Pakistan all-rounder Shahid Afridi has urged Indian Prime Minister Narendra Modi to let cricket happen between two neighbouring countries. Due to political relations between the two countries… [+2083 chars]"
+    },
+    {
+        "source": {
+            "id": "the-times-of-india",
+            "name": "The Times of India"
+        },
+        "author": "Amit Kumar",
+        "title": "Umran Malik can play all three formats of the game: Brett Lee - Times of India",
+        "description": "Cricket News: India's fast bowling sensation Umran Malik's ability to send stumps cartwheeling with consistent deliveries at and over 150kmph plus has made him a pl",
+        "url": "https://timesofindia.indiatimes.com/sports/cricket/australia-in-india/umran-malik-can-play-all-three-formats-of-the-game-brett-lee/articleshow/98867057.cms",
+        "urlToImage": "https://static.toiimg.com/thumb/msid-98866993,width-1070,height-580,imgsize-28050,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
+        "publishedAt": "2023-03-21T11:56:00Z",
+        "content": ""
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Hindustan Times"
+        },
+        "author": "HT Sports Desk",
+        "title": "'He said I will be the next captain. But 2 months later, I got dropped': Sehwag - Hindustan Times",
+        "description": "Virender Sehwag came close to becoming Team India's captain but those plans couldn't come to fruition. | Cricket",
+        "url": "https://www.hindustantimes.com/cricket/greg-chappell-came-and-said-i-ll-be-the-next-captain-don-t-know-what-happened-in-2-months-that-i-got-dropped-virender-sehwag-101679397007709.html",
+        "urlToImage": "https://www.hindustantimes.com/ht-img/img/2023/03/21/1600x900/sehwag-helmet-getty_1679397170492_1679397174645_1679397174645.jpg",
+        "publishedAt": "2023-03-21T11:18:21Z",
+        "content": "Despite all the batting records Virender Sehwag broke, not becoming the captain of the Indian team will go down as arguably his biggest missed opportunity. Between 2003 and 2012, Sehwag captained Ind… [+2871 chars]"
+    },
+    {
+        "source": {
+            "id": "the-times-of-india",
+            "name": "The Times of India"
+        },
+        "author": "TIMESOFINDIA.COM",
+        "title": "'I was getting decent scores, but...': Virat Kohli opens up to AB de Villiers - Indiatimes.com",
+        "description": "Cricket News: The camaraderie between Virat Kohli and AB de Villiers is known to the cricketing world with both players creating numerous records for the Royal Chal",
+        "url": "https://timesofindia.indiatimes.com/sports/cricket/news/i-was-getting-decent-scores-but-virat-kohli-opens-up-to-ab-de-villiers/articleshow/98865280.cms",
+        "urlToImage": "https://static.toiimg.com/thumb/msid-98865392,width-1070,height-580,imgsize-35002,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
+        "publishedAt": "2023-03-21T11:11:00Z",
+        "content": ""
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "NDTV News"
+        },
+        "author": "NDTV Sports Desk",
+        "title": "Venkatesh Prasad Breaks Silence On Brutal Twitter Attack Of KL Rahul - NDTV Sports",
+        "description": "Venkatesh Prasad opened up about the entire controversy after criticising KL Rahul for his form in Test cricket.",
+        "url": "https://sports.ndtv.com/cricket/have-not-been-harsh-venkatesh-prasads-honest-take-on-kl-rahul-saga-3880248",
+        "urlToImage": "https://c.ndtvimg.com/2023-03/l17ghk4o_kl-rahul-afp_625x300_19_March_23.jpg?im=FaceCrop,algorithm=dnn,width=1200,height=675",
+        "publishedAt": "2023-03-21T10:17:31Z",
+        "content": "Former Indian cricket team fast bowler Venkatesh Prasad found himself in the news after criticising KL Rahul following the star batter's disappointing form in the Test series against Australia. Rahul… [+1505 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Cricbuzz"
+        },
+        "author": null,
+        "title": "South Africa vs West Indies, 3rd ODI, West Indies tour of South Africa, 2023 - Cricbuzz",
+        "description": "Follow South Africa vs West Indies, 3rd ODI, Mar 21, West Indies tour of South Africa, 2023 with live Cricket score, ball by ball commentary updates on Cricbuzz",
+        "url": "https://www.cricbuzz.com/cricket-commentary/56208/rsa-vs-wi-3rd-odi-west-indies-tour-of-south-africa-2023",
+        "urlToImage": null,
+        "publishedAt": "2023-03-21T08:04:34Z",
+        "content": "16:44 Local Time, 14:44 GMT, 20:14 IST: My my, to knock 261 off inside 30 overs was some effort and Heinrich Klaasen deserves all the credit in the world for coming up with that gem of an innings. Ch… [+916 chars]"
+    }
+]
+
+constructor(){
+    super()
+this.state={article:this.arr,page:1
+           
+       }}
+async componentDidMount()
+{
+    let api=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=302536f343ce42879fdd7a1d10740764&q&pageSize=${this.props.pageSize}&page=${this.props.page}`
+   
+    let data=await fetch(api)
+    let jsondata=await data.json()
+    this.setState({article:jsondata.articles})
+}
+  pre=async()=>{
+    let api=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=302536f343ce42879fdd7a1d10740764&q&pageSize=${this.props.pageSize}&page=${this.state.page -1}`
+   
+    let data=await fetch(api)
+    let jsondata=await data.json()
+    this.setState({article:jsondata.articles,page:this.state.page-1})
+}
+ next=async()=>
+{
+    let api=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=302536f343ce42879fdd7a1d10740764&q&pageSize=${this.props.pageSize}&page=${this.state.page +1}`
+   
+    let data=await fetch(api)
+    let jsondata=await data.json()
+    this.setState({article:jsondata.articles,page:this.state.page+1})
+}
+   render(){
+    return (
+        <div className='container text-center'>
+            <div className="row">
+        <h2>{this.props.category} News</h2>
+          { this.state.article.map((e)=>{
+            return <div className='col-md-4' key={e.url}>
+                <Newsitem   title={e.title} discription={e.description} url={e.url} imgurl={e.urlToImage} />
+              
+            </div>
+          })} </div>  <button className='btn btn-primary mx-3 my-4' onClick={this.pre}>pre</button>
+                <button className='btn btn-primary mx-3'  onClick={this.next}>next</button>
+
+      </div>
+)}}
+
+export default News
